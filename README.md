@@ -5,7 +5,7 @@ If you have received a CSR from a vendor and been directed to use a public CA, y
 This repo includes a vagrant file that works with Hyper-V to add a ubunto box to add certbot to.  You can use any working certbot install.
 
 Read [dhcp](dhcp.md) if you need to configure Hyper-V network
-read [certbot](certbot.md) if you need a machine for Certbot
+Go to certbot if you need a machine for Certbot
 
 ## Running Certbot
 
@@ -32,3 +32,29 @@ sudo -E certbot certonly \
 ```
 
 The required DNS is created, the CSR is read and the cert is issued.
+
+## Config for vagrant certbot server {#certbot}
+
+When the server comes up, need to install certbot.
+
+```bash
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo snap install certbot-dns-route53    
+  ** This had an error and I ran sudo snap set certbot trust-plugin-with-root=ok
+```
+
+I repeatedly had issues with time service being out of sync so this wouldn't work with route-53.
+The following command showed that the time was out of sync
+
+```bash
+sudo systemctl status hv-kvp-daemon.service 
+```
+
+I used this to force it to be up to date to keep going.
+
+```bash
+sudo apt update
+sudo apt install ntpdate
+sudo ntpdate pool.ntp.org
+```
