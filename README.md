@@ -4,8 +4,8 @@ If you have received a CSR from a vendor and been directed to use a public CA, y
 
 This repo includes a vagrant file that works with Hyper-V to add a ubunto box to add certbot to.  You can use any working certbot install.
 
-Read [dhcp](dhcp.md) if you need to configure Hyper-V network
-Go to certbot if you need a machine for Certbot
+* Read [dhcp](dhcp.md) if you need to configure Hyper-V network
+* Read [certbot](#config-for-vagrant-certbot-server-certbot) if you need a machine for Certbot
 
 ## Running Certbot
 
