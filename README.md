@@ -1,6 +1,6 @@
 # Use Certbot to create a Cert from a CSR
 
-If you have received a CSR from a vendor and been directed to use a public CA, you can use Certbot to complete the request.  This example is using Route53 DNS verification instead of a website.  You could use other DNS verification if you follow the Certbot documentation.   The trick here is that you provide the CSR file, and you get back .pem that the vendor imports into the system that contains the private key.  
+If you have received a CSR from a vendor and been directed to use a public CA, you can use Certbot to complete the request against Let's Encrypt.  This example is using Route53 DNS verification instead of a website.  You could use other DNS verification if you follow the Certbot documentation.   The trick here is that you provide the CSR file, and you get back .pem that the vendor imports into the system that contains the private key.  
 
 This repo includes a vagrant file that works with Hyper-V to add a ubuntu box to add certbot to.  You can use any working certbot install.
 
