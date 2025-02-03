@@ -101,7 +101,7 @@ sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf  to check the file for syntax errors
 
 ## Config for vagrant certbot server
 
-When the server comes up, need to install certbot.
+To configure the certbot server using the vagrant file, you'll need a root synced folder for the mounted 'pc' folder.  In the file I used serviceuser and servicepw as the username and password.  You'll want to specify these.  When the server comes up, need to install certbot.
 
 ```bash
 sudo snap install --classic certbot
