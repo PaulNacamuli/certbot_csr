@@ -95,7 +95,6 @@ sudo systemctl restart isc-dhcp-server
 sudo systemctl enable isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 
-
 sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf  to check the file for syntax errors
 ```
 
